@@ -15,3 +15,9 @@ That URL is just the connection string for the AMQP broker (in this case RabbitM
 
 In other words, both publisher and subscriber are pointing at the same broker instance. That way, the publisher can send messages into exchanges/queues on that broker, and the subscriber can pull those very same messages back out.
 
+## RabbitMQ
+
+### Running RabbitMQ as message broker
+
+![rabbitmq](/publisher/images/Running%20RabbitMQ.png)
+
