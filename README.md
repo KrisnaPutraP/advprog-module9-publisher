@@ -19,12 +19,17 @@ In other words, both publisher and subscriber are pointing at the same broker in
 
 ### Running RabbitMQ as message broker
 
-![rabbitmq](/publisher/images/Running%20RabbitMQ.png)
+![rabbitmq](images/Running%20RabbitMQ.png)
 
 ### Sending and Processing Event
 
-![sspublisher](/publisher/images/sspublisher.png)
-![sssubscriber](/publisher/images/sssubscriber.png)
+![sspublisher](images/sspublisher.png)
+![sssubscriber](images/sssubscriber.png)
 
 What happened is, when the message broker or RabbitMQ is running and we execute the `Subscriber` and `Publisher` programs (using `cargo run`), the `Publisher` sends data to the message broker, and the `Subscriber` receives that data. In the illustration above, we can see that the Publisher sends the data once to the message broker, and the `Subscriber` receives it.
 
+### Monitoring chart based on publisher
+
+![sschart](images/sschart.png)
+
+In the image above, I repeatedly ran the Publisher multiple times to significantly increase the message rates. Based on what I did, I understand that the message rates will rise when the Publisher sends data to the message broker frequently. If the message rates are high, it means the message broker is receiving a large volume of data from the Publisher, creating the pattern shown in the chart.
