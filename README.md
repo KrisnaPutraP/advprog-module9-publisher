@@ -21,3 +21,10 @@ In other words, both publisher and subscriber are pointing at the same broker in
 
 ![rabbitmq](/publisher/images/Running%20RabbitMQ.png)
 
+### Sending and Processing Event
+
+![sspublisher](/publisher/images/sspublisher.png)
+![sssubscriber](/publisher/images/sssubscriber.png)
+
+What happened is, when the message broker or RabbitMQ is running and we execute the `Subscriber` and `Publisher` programs (using `cargo run`), the `Publisher` sends data to the message broker, and the `Subscriber` receives that data. In the illustration above, we can see that the Publisher sends the data once to the message broker, and the `Subscriber` receives it.
+
